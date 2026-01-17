@@ -1,9 +1,9 @@
  .des{
-     margin : 0;
-                background-color: #0056b3;
-                color: white;
-                font-family: Arial;
-                text-align: center;
+    margin : 0;
+    background-color: #0056b3;
+    color: white;
+    font-family: Arial;
+    text-align: center;
  }
 
             *{
@@ -66,4 +66,88 @@ body {
 
 .main-header nav a:hover {
   text-decoration: underline;
+}
+
+div{
+  float: left;
+}
+
+.col-1{
+  width: 8.33%;
+}
+
+.col-2{
+  width: 16.66%;
+}
+
+.col-3{
+  width: 25%;
+}
+
+.col-4{
+  width: 33.33%;
+}
+
+.col-5{
+  width: 41.66%;
+}
+
+.col-6{
+  width: 50%;
+}
+
+.col-7{
+  width: 58.33%;
+}
+
+.col-8{
+  width: 66.66%;
+}
+
+.col-9{
+  width: 75%;
+}
+
+.col-10{
+  width: 83.33%;
+}
+
+.col-11{
+  width: 91.66%;
+}
+
+.col-12{
+  width: 100%;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+.text{
+  font-weight: light;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+.box{
+  background-color: white;
+  padding: 10px;
+  color: black;
+  text-align: left;
+}
+
+.whitespace{
+  background-color: white;
+  color: white;
+}
+
+.feature{
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: Arial;
+  text-align: center;
 }
