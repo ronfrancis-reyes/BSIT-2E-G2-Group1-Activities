@@ -1,61 +1,74 @@
-* {
-  box-sizing: border-box;
+.des {
+  margin: 0;
+  background-color: #0056b3;
+  color: white;
   font-family: Arial;
-  font-size: small;
+  text-align: center;
 }
 
-.label {
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 25px;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .row {
   width: 100%;
   clear: both;
 }
-.prices {
-  background-color: rgb(255, 255, 255);
-  float: left;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 3px 3px 14px 3px rgba(203, 198, 198, 0.75);
-  padding: 15px;
+
+.banner {
+  padding: 60px 20px;
 }
 
-.choose {
-  border-radius: 5px;
-  border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: rgb(26, 200, 253);
+.banner h1 {
+  font-weight: bold;
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.banner h2 {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-header {
+  background-color: #0ea5b7;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.choose:hover {
-  background-color: rgb(11, 147, 189);
+.main-header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
 }
 
-.choose:active {
-  background-color: rgba(11, 147, 189, 0.699);
+.main-header nav {
+  margin-top: 15px;
 }
 
-.price-2 {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+.main-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.price-1 {
-  margin-left: 10%;
+.main-header nav a:hover {
+  text-decoration: underline;
 }
-p {
-  margin-bottom: 0px;
+.box {
+  float: left;
 }
-
 .col-1 {
   width: 8.33%;
 }
@@ -102,4 +115,94 @@ p {
 
 .col-12 {
   width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+.text {
+  font-weight: light;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+  color: black;
+  text-align: left;
+}
+
+.whitespace {
+  background-color: white;
+  color: white;
+}
+
+.feature {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: Arial;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: small;
+}
+
+.label {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.row {
+  width: 100%;
+  clear: both;
+}
+.prices {
+  background-color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 3px 3px 14px 3px rgba(203, 198, 198, 0.75);
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.choose {
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(26, 200, 253);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.choose:hover {
+  background-color: rgb(11, 147, 189);
+}
+
+.choose:active {
+  background-color: rgba(11, 147, 189, 0.699);
+}
+
+.price-2 {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.price-1 {
+  margin-left: 10%;
+}
+p {
+  margin-bottom: 0px;
 }
