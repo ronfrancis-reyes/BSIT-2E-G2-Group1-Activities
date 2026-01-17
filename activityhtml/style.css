@@ -34,3 +34,36 @@
                 max-width: 650px;
             }
        
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-header {
+  background-color: #0ea5b7; 
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.main-header nav {
+  margin-top: 15px;
+}
+
+.main-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main-header nav a:hover {
+  text-decoration: underline;
+}
