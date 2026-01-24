@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel ="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Personal Data Sheet</title>
+</head>
+<body>
+    <div class="card">
+  <div class="card-header submitHeader">
+    Personal Data Sheet
+  </div>
+  <div class="card-body">
+    <h5 class="card-title title">Personal Information</h5>
+    <div class="card-text">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="birthdate">
+            </div>
+            <div class="col-md-6">
+                <label for="inputState" class="form-label">Gender</label>
+                <select id="gender" class="form-select">
+                <option selected>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not say</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="inputState" class="form-label">Civil status</label>
+                <select id="status" class="form-select">
+                <option selected>Select Status</option>
+                <option>Single</option>
+                <option>Married</option>
+                <option>Widowed</option>
+                </select>
+            </div>
+            <h5 class="title">Contact Information</h5>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" id="number">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Complete Address</label>
+                <input type="text" class="form-control" id="address">
+                </div>
+            </div>
+            <div class="col-12">
+                <button onclick="submit()" type="button" class="btn btn-primary col-md-12 button">Submit Personal Data Sheet</button>
+            </div>
+            <br>
+            <label id="notif"></label>
+        </div>
+    </div>    
+  </div>
+  <div class="card hidden" id="submitted">
+  <div class="card-header submittedHeader">
+    Submitted Information
+  </div>
+  <div class="card-body submitFormat">
+    <label>Full Name:</label>
+    <br>
+    <label>Date of Birth:</label>
+    <br>
+    <label>Gender:</label>
+    <br>
+    <label>Status:</label>
+    <br>
+    <label>Email:</label>
+    <br>
+    <label>Mobile:</label>
+    <br>
+    <label>Address:</label>
+    <br>
+  </div>
+</div>
+</div>
+
+<script>
+    function submit(){
+        let submitted = document.getElementById("submitted")
+        let not = document.getElementById("notif")
+        submitted.style.display = "block"
+        let name = document.getElementById("name")
+        let birtday = document.getElementById("birthdate")
+        let gender = document.getElementById("gender")
+        let status = document.getElementById("status")
+        let email = document.getElementById("email")
+        let number = document.getElementById("number")
+        let address = document.getElementById("address")
+
+        
+    }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
