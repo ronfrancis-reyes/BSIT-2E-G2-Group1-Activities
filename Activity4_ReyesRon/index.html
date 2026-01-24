@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +28,7 @@
             <div class="col-md-6">
                 <label for="inputState" class="form-label">Gender</label>
                 <select id="gender" class="form-select">
-                <option selected>Select Gender</option>
+                <option selected value="">Select Gender</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Prefer not say</option>
@@ -38,7 +37,7 @@
             <div class="col-md-6">
                 <label for="inputState" class="form-label">Civil status</label>
                 <select id="status" class="form-select">
-                <option selected>Select Status</option>
+                <option selected value="">Select Status</option>
                 <option>Single</option>
                 <option>Married</option>
                 <option>Widowed</option>
@@ -62,7 +61,7 @@
                 <button onclick="submit()" type="button" class="btn btn-primary col-md-12 button">Submit Personal Data Sheet</button>
             </div>
             <br>
-            <label id="notif"></label>
+            <label id="warning" style="color: red; font-weight: bold;"></label>
         </div>
     </div>    
   </div>
@@ -70,39 +69,53 @@
   <div class="card-header submittedHeader">
     Submitted Information
   </div>
-  <div class="card-body submitFormat">
-    <label>Full Name:</label>
-    <br>
-    <label>Date of Birth:</label>
-    <br>
-    <label>Gender:</label>
-    <br>
-    <label>Status:</label>
-    <br>
-    <label>Email:</label>
-    <br>
-    <label>Mobile:</label>
-    <br>
-    <label>Address:</label>
-    <br>
-  </div>
+  <div class="card-body submitFormat" id="submitBody"></div>
 </div>
 </div>
 
 <script>
-    function submit(){
-        let submitted = document.getElementById("submitted")
-        let not = document.getElementById("notif")
-        submitted.style.display = "block"
-        let name = document.getElementById("name")
-        let birtday = document.getElementById("birthdate")
-        let gender = document.getElementById("gender")
-        let status = document.getElementById("status")
-        let email = document.getElementById("email")
-        let number = document.getElementById("number")
-        let address = document.getElementById("address")
-
-        
+        function submit(){
+        let name = document.getElementById("name").value
+        let birthday = document.getElementById("birthdate").value
+        let gender = document.getElementById("gender").value
+        let status = document.getElementById("status").value
+        let email = document.getElementById("email").value
+        let number = document.getElementById("number").value
+        let address = document.getElementById("address").value
+        let warn = document.getElementById("warning")
+        if(name.trim() == ""){
+            warn.innerText = "Name Required"
+        }
+        else if(birthday.trim() == ""){
+            warn.innerText = "Birthday Required"
+        }
+        else if(gender.trim() == ""){
+            warn.innerText = "Gender Required"
+        }
+        else if(status.trim() == ""){
+            warn.innerText = "Status Required"
+        }
+        else if(email.trim() == ""){
+            warn.innerText = "Email Required"
+        }
+        else if(number.trim() == ""){
+            warn.innerText = "Mobile Number Required"
+        }
+        else if(address.trim() == ""){
+            warn.innerText = "Address Required"
+        }
+        else{
+            let submitted = document.getElementById("submitted")
+            let display = document.getElementById("submitBody")
+            submitted.style.display = "block"
+            display.innerText = "Name: " + name + "\n" + 
+                            "Date of Birth: " + birthday + "\n" +
+                            "Gender: " + gender + "\n" +
+                            "Status: " + status + "\n" +
+                            "Email: " + email + "\n" + 
+                            "Mobile: " + number + "\n" +
+                            "Address: " + address + "\n";
+        }
     }
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

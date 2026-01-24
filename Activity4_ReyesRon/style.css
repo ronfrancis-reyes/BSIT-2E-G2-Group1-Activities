@@ -38,4 +38,5 @@ body{
 .submitFormat{
     font-weight: bold;
     line-height: 2;
+    white-space: pre-line;
 }
