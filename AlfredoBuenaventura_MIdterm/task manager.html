@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Task Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task manager style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <header class="top-header">
+            <h1>STUDENT TASK <br> MANAGER</h1>
+        </header>
+
+        <main>
+
+            <section class="form-section">
+                <h3>ADD NEW TASK</h3>
+
+                <form id="taskForm">
+                    <div class="form-row full-width">
+                        <label for="taskName">Task:</label>
+                        <input type="text" id="taskName" placeholder="Enter task name...">
+                    </div>
+
+                    <div class="form-row three-cols">
+                        <div class="form-group">
+                            <label for="dueDate">Due Date:</label>
+                            <input type="date" id="dueDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">Priority:</label>
+                            <select id="priority">
+                                <option value="">Select</option>
+                                <option value="high">HIGH</option>
+                                <option value="medium">MEDIUM</option>
+                                <option value="low">LOW</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <select id="category">
+                                <option value="">Select</option>
+                                <option value="Academic">Academic</option>
+                                <option value="Organization">Organization</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <button type="submit" id="addBtn">ADD TASK</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="table-section" id="activityStatusSection" style="display: none;">
+                <h3>ACTIVITY STATUS</h3>
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">Select</th>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Priority</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Completed</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskTableBody"></tbody>
+                </table>
+
+                <div class="table-actions">
+                    <button id="deleteSelectedBtn" class="delete-all-btn">DELETE SELECTED TASK</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="task manager.js"></script>
+</body>
+
+</html>

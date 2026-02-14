@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    background-color: #ebece7;
+    color: #1e4d2b;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.top-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    color: #1e4d2b;
+}
+
+h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.form-section {
+    background: transparent;
+    margin-bottom: 40px;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.full-width {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.full-width label {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.full-width input {
+    flex: 1;
+    background-color: #1e4d2b;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.three-cols {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #1e4d2b;
+    border-radius: 5px;
+    background: white;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.button-row {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#addBtn {
+    background-color: #1e4d2b;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#addBtn:hover {
+    background-color: #163a20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Section */
+.table-section h3 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 800;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #1e4d2b;
+    background: white;
+    margin-bottom: 20px;
+}
+
+th {
+    background-color: #1e4d2b;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-right: 1px solid #4a7a58;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #1e4d2b;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    vertical-align: middle;
+}
+
+/* Specific Column Styles */
+td:nth-child(2) {
+    /* Task Name */
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+.status-text {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.complete-check-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-checkbox {
+    width: 30px;
+    height: 30px;
+    background-color: #1e4d2b;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.custom-checkbox:hover {
+    transform: scale(1.1);
+}
+
+.custom-checkbox i {
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: none;
+}
+
+.custom-checkbox.completed i {
+    display: block;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #ebece7;
+    transform: scale(1.05);
+}
+
+.edit-btn {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.save-btn {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Inline Edit Inputs */
+.edit-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #1e4d2b;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Delete Button Area */
+.table-actions {
+    text-align: right;
+}
+
+.delete-all-btn {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.delete-all-btn:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
