@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f4f7f6; 
+    color: #333;
+}
+
+.main-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-section h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+#dateDisplay {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Card Layout */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 400px;
+    margin: 0 auto 40px auto;
+}
+
+.input-container input, 
+.input-container textarea, 
+.input-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#saveBtn {
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#saveBtn:hover {
+    background-color: #003d80;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #ffffff;
+    font-weight: 700;
+}
+
+/* Priority Colors (Rubric: Priority colors implemented) */
+.prio-high { color: #d9534f; font-weight: bold; }
+.prio-med { color: #f0ad4e; font-weight: bold; }
+.prio-low { color: #5cb85c; font-weight: bold; }
+
+/* Buttons & Hovers (Rubric: Buttons styled with hover effect) */
+.edit-btn, .del-btn, .done-btn {
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: opacity 0.2s;
+}
+
+.edit-btn { background-color: #ffc107; color: black; }
+.del-btn { background-color: #dc3545; color: white; }
+.done-btn { background-color: #28a745; color: white; }
+
+.edit-btn:hover, .del-btn:hover, .done-btn:hover {
+    opacity: 0.8;
+}
+
+.row-complete {
+    background-color: #f9f9f9;
+    text-decoration: line-through;
+    color: #aaa;
+}
