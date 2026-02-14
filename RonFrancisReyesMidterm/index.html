@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Task Management</title>
+</head>
+
+<body>
+    
+    <h1>Student Task Manager</h1>
+    <p id="date" style="font-size: 20px;"></p>
+
+<div class="container">
+    <form id="taskForm">
+    <input type="text" id="taskName" placeholder="Task Name">
+    <textarea id="description" rows="3" cols="30" placeholder="Task Description"></textarea>
+    <input type="date" id="dueDate">
+    <select id="priority">
+        <option value="">Priority</option>
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+    </select>
+    <button type="submit" class="add-btn">Add</button>
+</form>
+
+    <table style="width: 100%;">
+        <thead style="text-align: center;;">
+            <tr>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+            </tr>
+        </thead>
+            <tbody id="taskList"></tbody>
+    </table>
+</div>
+
+<script>
+  const dateTag = document.getElementById("date");
+  const today = new Date();
+  dateTag.textContent = today.toDateString();
+
+  let editRow = null;
+
+  const form = document.getElementById("taskForm");
+  const taskList = document.getElementById("taskList");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const task = document.getElementById("taskName").value.trim();
+    const description = document.getElementById("description").value;
+    const date = document.getElementById("dueDate").value;
+    const priority = document.getElementById("priority").value;
+
+    if(task === "" || description == ""|| date === "" || priority === ""){
+      alert("Please fill all fields");
+      return;
+    }
+
+    const today = new Date().toISOString().split("T")[0];
+    if(date < today){
+      alert("Past due date is not allowed");
+      return;
+    }
+
+    if(editRow === null){
+      createTask(task, description, date, priority);
+    }else{
+      updateTask(task, description, date, priority);
+    }
+
+    form.reset();
+  });
+
+  function createTask(task, description, date, priority){
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${task}</td>
+      <td>${description}</td>
+      <td>${priority}</td>
+      <td>${date}</td>
+      <td>Pending</td>
+      
+      <td>
+        <button class="complete">Complete</button>
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+      </td>
+    `;
+    
+    addEvents(row);
+    taskList.appendChild(row);
+  }
+
+  function addEvents(row){
+    row.querySelector(".complete").onclick = () => {
+      row.classList.toggle("completed");
+      row.children[4].innerHTML = "Completed";
+    };
+
+    row.querySelector(".edit").onclick = () => {
+      document.getElementById("taskName").value = row.children[0].innerText;
+      document.getElementById("description").value = row.children[1].innerText;
+      document.getElementById("priority").value = row.children[2].innerText;
+      document.getElementById("dueDate").value = row.children[3].innerText;
+      
+      editRow = row;
+    };
+    row.querySelector(".delete").onclick = () => {
+      if(confirm("Delete this task?")){
+        row.remove();
+      }
+    };
+  }
+
+  function updateTask(task,description , date, priority){
+    editRow.children[0].innerText = task;
+    editRow.children[1].innerText = description;
+    editRow.children[2].innerText = priority;
+    editRow.children[3].innerText = date;
+    
+    editRow = null;
+  }
+</script>
+</body>
+</html>
